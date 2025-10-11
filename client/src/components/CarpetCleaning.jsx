@@ -8,6 +8,8 @@ export default function CarpetCleaning() {
     "Safe for pets and children",
     "Improves indoor air quality",
     "Extends carpet lifespan",
+    "Zero Residue",
+    "Safe for kids, pets, and the whole family"
   ]
 
   return (
@@ -18,7 +20,7 @@ export default function CarpetCleaning() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 rounded-lg overflow-hidden">
               <img
-                src="/professional-carpet-cleaning.png"
+                src="/carpet4.jpg"
                 alt="Carpet cleaning service"
                 className="w-full h-full object-cover"
               />
@@ -26,8 +28,8 @@ export default function CarpetCleaning() {
             <div className="order-1 md:order-2">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Our professional carpet cleaning service goes beyond surface cleaning to extract embedded dirt,
-                allergens, and bacteria. Using advanced hot water extraction methods, we restore your carpets to a
-                fresh, clean state while protecting the fibers.
+                allergens, odors, and bacteria. Using powerful, eco-friendly carpet cleaning solutions, we restore your carpets to a
+                fresh, clean state while protecting the fibers. Leaving your carpet looking brand new.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (

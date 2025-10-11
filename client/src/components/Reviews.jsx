@@ -1,5 +1,5 @@
 import { Star } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/Card"
 
 export default function Reviews() {
   const reviews = [

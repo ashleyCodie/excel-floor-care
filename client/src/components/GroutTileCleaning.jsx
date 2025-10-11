@@ -33,7 +33,7 @@ export default function GroutTileCleaning() {
             </div>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/professional-grout-and-tile-cleaning-service.jpg"
+                src="/grout1.jpg"
                 alt="Grout and tile cleaning service"
                 className="w-full h-full object-cover"
               />
