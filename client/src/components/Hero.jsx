@@ -1,6 +1,7 @@
 "use client";
 import GradientText from "./GradientText";
 import { Button } from "@/components/ui/Button";
+import CurvedLoop from "./CurvedLoop";
 
 export default function Hero() {
   const handleDemoRequest = () => {
@@ -10,7 +11,20 @@ export default function Hero() {
 
   return (
     <section className="relative bg-blue-600 text-white py-24 md:py-32">
-      <div className="container mx-auto px-4">
+      {/* CurvedLoop at the very top, full width */}
+      <div className="absolute top-0 left-0 w-full h-32 md:h-40 overflow-hidden">
+        <CurvedLoop 
+          marqueeText="100% SATISFACTION GUARANTEED ✦ RATED #1 IN PHX ✦  "
+          speed={2}
+          curveAmount={200}
+          direction="left"
+          interactive={true}
+          className="fill-white"
+        />
+      </div>
+
+      {/* Main content with top padding to avoid overlap */}
+      <div className="container mx-auto px-4 pt-32 md:pt-40">
         <div className="max-w-3xl mx-auto text-center">
           <GradientText
             colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
@@ -21,11 +35,10 @@ export default function Hero() {
             Excel Floor Care
           </GradientText>
           
-          {/* Image added here */}
       <img 
   src="/logo2.png" 
   alt="Excel Floor Care Services" 
-  className="mx-auto mb-8 rounded-lg shadow-xl w-48"
+  className="mx-auto mb-8 rounded-lg shadow-xl w-32"
 />
           
           <p className="text-xl md:text-2xl mb-8 text-blue-50">
