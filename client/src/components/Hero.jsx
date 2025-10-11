@@ -12,7 +12,6 @@ export default function Hero() {
     <section className="relative bg-blue-600 text-white py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          {/* <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Excel Floor Care</h1> */}
           <GradientText
             colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
             animationSpeed={3}
@@ -21,6 +20,14 @@ export default function Hero() {
           >
             Excel Floor Care
           </GradientText>
+          
+          {/* Image added here */}
+      <img 
+  src="/logo2.png" 
+  alt="Excel Floor Care Services" 
+  className="mx-auto mb-8 rounded-lg shadow-xl w-48"
+/>
+          
           <p className="text-xl md:text-2xl mb-8 text-blue-50">
             Professional Grout, Tile & Carpet Cleaning Services
           </p>
