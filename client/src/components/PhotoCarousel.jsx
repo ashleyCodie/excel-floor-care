@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function PhotoCarousel() {
@@ -9,23 +9,23 @@ export default function PhotoCarousel() {
 
   const photos = [
     {
-      url: "/clean-tile-floor-before-and-after.jpg",
+      url: "/b&a.jpg",
       alt: "Clean tile floor transformation",
     },
     {
-      url: "/grout-cleaning-before-and-after.jpg",
+      url: "/b&a2.jpg",
       alt: "Grout cleaning results",
     },
     {
-      url: "/carpet-cleaning-professional-service.jpg",
+      url: "/b&a3.jpg",
       alt: "Professional carpet cleaning",
     },
     {
-      url: "/bathroom-tile-and-grout-cleaning.jpg",
+      url: "/b&a4.jpg",
       alt: "Bathroom tile cleaning",
     },
     {
-      url: "/kitchen-floor-tile-cleaning.jpg",
+      url: "b&a5.jpg",
       alt: "Kitchen floor cleaning",
     },
   ]

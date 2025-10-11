@@ -20,6 +20,7 @@ export default function About() {
               them in pristine condition. Our services are designed to extend the life of your flooring while creating a
               healthier, cleaner environment for you and your family.
             </p>
+            <p>Excel Floor Care, was founded in 1995. Over the years, we have built a reputation for reliability, professionalism, and outstanding customer service. We are proud to be a family owned and operated business.</p>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/Button"
+import { Input } from "@/components/ui/Input"
+import { Textarea } from "@/components/ui/Textarea"
+import { Card, CardContent } from "@/components/ui/Card"
 import { MapPin, Phone, Clock } from "lucide-react"
 
 export default function Contact() {
@@ -12,6 +12,7 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
+    address: "",
     message: "",
   })
   const [status, setStatus] = useState("")
@@ -41,6 +42,9 @@ export default function Contact() {
         <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">Contact Us</h2>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           <div>
+              {/* <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6 mb-2" size="lg">
+              Request a Free Grout Demo
+            </Button> */}
             <Card className="mb-6">
               <CardContent className="pt-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -48,7 +52,7 @@ export default function Contact() {
                     <Input
                       type="text"
                       name="name"
-                      placeholder="Your Name"
+                      placeholder="Full Name"
                       value={formData.name}
                       onChange={handleChange}
                       required
@@ -58,7 +62,7 @@ export default function Contact() {
                     <Input
                       type="email"
                       name="email"
-                      placeholder="Your Email"
+                      placeholder="Email"
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -68,8 +72,18 @@ export default function Contact() {
                     <Input
                       type="tel"
                       name="phone"
-                      placeholder="Your Phone"
+                      placeholder="Phone"
                       value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                   <div>
+                    <Input
+                      type="text"
+                      name="address"
+                      placeholder="Address"
+                      value={formData.address}
                       onChange={handleChange}
                       required
                     />
@@ -95,9 +109,7 @@ export default function Contact() {
                 </form>
               </CardContent>
             </Card>
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6" size="lg">
-              Request a Free Grout Demo
-            </Button>
+          
           </div>
           <div className="space-y-6">
             <Card>
@@ -107,9 +119,9 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Address</h3>
                     <p className="text-gray-700">
-                      123 Main Street
+                      Phoenix Metropolitan Area
                       <br />
-                      Your City, ST 12345
+                      Arizona, USA
                     </p>
                   </div>
                 </div>
@@ -121,7 +133,7 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                    <p className="text-gray-700">(555) 123-4567</p>
+                    <p className="text-gray-700">(480) 729-2731</p>
                   </div>
                 </div>
               </CardContent>

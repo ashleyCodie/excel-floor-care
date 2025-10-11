@@ -1,22 +1,32 @@
-"use client"
-
-import { Button } from "@/components/ui/button"
+"use client";
+import GradientText from "./GradientText";
+import { Button } from "@/components/ui/Button";
 
 export default function Hero() {
   const handleDemoRequest = () => {
-    const contactSection = document.getElementById("contact")
-    contactSection?.scrollIntoView({ behavior: "smooth" })
-  }
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section className="relative bg-blue-600 text-white py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Excel Floor Care</h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-50">Professional Grout, Tile & Carpet Cleaning Services</p>
+          {/* <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Excel Floor Care</h1> */}
+          <GradientText
+            colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
+            animationSpeed={3}
+            showBorder={false}
+            className="text-7xl md:text-6xl font-bold mb-6"
+          >
+            Excel Floor Care
+          </GradientText>
+          <p className="text-xl md:text-2xl mb-8 text-blue-50">
+            Professional Grout, Tile & Carpet Cleaning Services
+          </p>
           <p className="text-lg mb-10 text-blue-100">
-            Transform your floors with our expert cleaning services. We bring back the shine and freshness to your home
-            or business.
+            Transform your floors with our expert cleaning services. We bring
+            back the shine and freshness to your home or business.
           </p>
           <Button
             size="lg"
@@ -28,5 +38,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
