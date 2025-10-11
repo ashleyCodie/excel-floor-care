@@ -1,7 +1,10 @@
-import { Star } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/Card"
+import { useState } from "react";
+import { Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/Card";
+import SplitText from "./SplitText";
 
 export default function Reviews() {
+  const [key, setKey] = useState(0);
   const reviews = [
     {
       name: "Sarah Johnson",
@@ -19,32 +22,63 @@ export default function Reviews() {
       name: "Emily Rodriguez",
       rating: 5,
       text: "The team was courteous and efficient. They transformed our dirty grout lines into something beautiful. Worth every penny!",
-      date: "November 2024",
+      date: "November 2025",
     },
     {
       name: "David Thompson",
       rating: 5,
       text: "Excellent service from start to finish. They explained the process clearly and delivered exceptional results. Very satisfied!",
-      date: "October 2024",
+      date: "October 2025",
     },
-  ]
+  ];
+
+  const handleAnimationComplete = () => {
+    setTimeout(() => {
+      setKey((prevKey) => prevKey + 1);
+    }, 1000);
+  };
 
   return (
     <section id="reviews" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">What Our Customers Say</h2>
+        <img
+          src="/logo2.png"
+          alt="Excel Floor Care Services"
+          className="mx-auto mb-8 rounded-lg shadow-xl w-42"
+        />
+        <SplitText
+          text="What Our Customers Say"
+          className="text-4xl font-bold text-center mb-8 text-blue-600 ml-55 pl-80"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {reviews.map((review, index) => (
             <Card key={index}>
               <CardContent className="pt-6">
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                    />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">{review.text}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  {review.text}
+                </p>
                 <div className="flex justify-between items-center text-sm">
-                  <span className="font-semibold text-gray-900">{review.name}</span>
+                  <span className="font-semibold text-gray-900">
+                    {review.name}
+                  </span>
                   <span className="text-gray-500">{review.date}</span>
                 </div>
               </CardContent>
@@ -53,5 +87,5 @@ export default function Reviews() {
         </div>
       </div>
     </section>
-  )
+  );
 }
