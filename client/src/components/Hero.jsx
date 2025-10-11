@@ -13,7 +13,7 @@ export default function Hero() {
     <section className="relative bg-blue-600 text-white py-24 md:py-32">
       {/* CurvedLoop at the very top, full width */}
       <div className="absolute top-0 left-0 w-full h-32 md:h-40 overflow-hidden">
-        <CurvedLoop 
+        <CurvedLoop
           marqueeText="100% SATISFACTION GUARANTEED ✦ RATED #1 IN PHX ✦  "
           speed={2}
           curveAmount={200}
@@ -34,13 +34,13 @@ export default function Hero() {
           >
             Excel Floor Care
           </GradientText>
-          
-      <img 
-  src="/logo2.png" 
-  alt="Excel Floor Care Services" 
-  className="mx-auto mb-8 rounded-lg shadow-xl w-32"
-/>
-          
+
+          <img
+            src="/clean.jpg"
+            alt="Excel Floor Care Services"
+            className="mx-auto mb-8 rounded-lg shadow-xl w-82"
+          />
+
           <p className="text-xl md:text-2xl mb-8 text-blue-50">
             Professional Grout, Tile & Carpet Cleaning Services
           </p>
