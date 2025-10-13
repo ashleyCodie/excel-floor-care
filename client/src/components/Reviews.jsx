@@ -16,7 +16,7 @@ export default function Reviews() {
       name: "Michael Chen",
       rating: 5,
       text: "Professional, punctual, and the results were outstanding. Our carpets have never looked better. Will definitely use them again.",
-      date: "December 2024",
+      date: "July 2025",
     },
     {
       name: "Emily Rodriguez",

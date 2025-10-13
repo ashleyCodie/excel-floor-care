@@ -38,7 +38,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-blue-100">
       <div className="container mx-auto px-4">
         
           <GradientText

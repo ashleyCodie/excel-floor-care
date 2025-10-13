@@ -24,7 +24,7 @@ export default function GroutTileCleaning() {
   const enableHover = true;
 
   return (
-    <section id="grout-tile" className="py-20 bg-gray-50">
+    <section id="grout-tile" className="py-20 bg-blue-100">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <SplitText

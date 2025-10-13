@@ -1,3 +1,4 @@
+
 "use client";
 import GradientText from "./GradientText";
 import { Button } from "@/components/ui/Button";
@@ -10,11 +11,20 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-blue-600 text-white py-24 md:py-32">
+    <section className="relative text-white py-24 md:py-32">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/clean.jpg')" }}
+      >
+        {/* Optional: Add overlay for better text readability */}
+        <div className="absolute inset-0 bg-blue-600/70"></div>
+      </div>
+
       {/* CurvedLoop at the very top, full width */}
-      <div className="absolute top-0 left-0 w-full h-32 md:h-40 overflow-hidden">
-        <CurvedLoop
-          marqueeText="100% SATISFACTION GUARANTEED ✦ RATED #1 IN PHX ✦  "
+      <div className="absolute top-0 left-0 w-full h-32 md:h-40 overflow-hidden z-10">
+        <CurvedLoop 
+          marqueeText="100% SATISFACTION GUARANTEED ✦ RATED #1 IN PHX ✦ EXCEL FLOOR CARE ✦ "
           speed={2}
           curveAmount={200}
           direction="left"
@@ -24,7 +34,7 @@ export default function Hero() {
       </div>
 
       {/* Main content with top padding to avoid overlap */}
-      <div className="container mx-auto px-4 pt-32 md:pt-40">
+      <div className="container mx-auto px-4 pt-32 md:pt-40 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <GradientText
             colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
@@ -34,13 +44,17 @@ export default function Hero() {
           >
             Excel Floor Care
           </GradientText>
-
-          <img
-            src="/clean.jpg"
-            alt="Excel Floor Care Services"
-            className="mx-auto mb-8 rounded-lg shadow-xl w-82"
-          />
-
+                  <GradientText
+            colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
+            animationSpeed={3}
+            showBorder={false}
+            className="text-7xl md:text-6xl font-bold mb-6"
+          >
+            480-729-2731
+          </GradientText>
+          
+          {/* Remove the img tag since it's now the background */}
+          
           <p className="text-xl md:text-2xl mb-8 text-blue-50">
             Professional Grout, Tile & Carpet Cleaning Services
           </p>
