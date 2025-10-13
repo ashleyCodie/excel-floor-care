@@ -36,22 +36,23 @@ export default function Hero() {
       {/* Main content with top padding to avoid overlap */}
       <div className="container mx-auto px-4 pt-32 md:pt-40 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <GradientText
-            colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
-            animationSpeed={3}
-            showBorder={false}
-            className="text-7xl md:text-6xl font-bold mb-6"
-          >
-            Excel Floor Care
-          </GradientText>
-                  <GradientText
-            colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
-            animationSpeed={3}
-            showBorder={false}
-            className="text-7xl md:text-6xl font-bold mb-6"
-          >
-            480-729-2731
-          </GradientText>
+     <GradientText
+  colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
+  animationSpeed={3}
+  showBorder={false}
+  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+>
+  Excel Floor Care
+</GradientText>
+
+<GradientText
+  colors={["#6b7280", "#FFFF", "#000", "#FFFF", "#6b7280"]}
+  animationSpeed={3}
+  showBorder={false}
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+>
+  480-729-2731
+</GradientText>
           
           {/* Remove the img tag since it's now the background */}
           

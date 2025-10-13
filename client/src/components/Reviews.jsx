@@ -39,16 +39,20 @@ export default function Reviews() {
   };
 
   return (
-    <section id="reviews" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <img
-          src="/logo2.png"
-          alt="Excel Floor Care Services"
-          className="mx-auto mb-8 rounded-lg shadow-xl w-42"
-        />
+   <section id="reviews" className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <img
+      src="/logo2.png"
+      alt="Excel Floor Care Services"
+      className="mx-auto mb-8 rounded-lg shadow-xl w-42"
+    />
+    
+    <div className="max-w-5xl mx-auto">
+      {/* Wrap SplitText in flex container */}
+      <div className="flex justify-center mb-8">
         <SplitText
           text="What Our Customers Say"
-          className="text-4xl font-bold text-center mb-8 text-blue-600 ml-55 pl-80"
+          className="text-4xl font-bold text-blue-600"
           delay={100}
           duration={0.6}
           ease="power3.out"
@@ -60,32 +64,35 @@ export default function Reviews() {
           textAlign="center"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {reviews.map((review, index) => (
-            <Card key={index}>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  {review.text}
-                </p>
-                <div className="flex justify-between items-center text-sm">
-                  <span className="font-semibold text-gray-900">
-                    {review.name}
-                  </span>
-                  <span className="text-gray-500">{review.date}</span>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
       </div>
-    </section>
+      
+      <div className="grid md:grid-cols-2 gap-6">
+        {reviews.map((review, index) => (
+          <Card key={index}>
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(review.rating)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                {review.text}
+              </p>
+              <div className="flex justify-between items-center text-sm">
+                <span className="font-semibold text-gray-900">
+                  {review.name}
+                </span>
+                <span className="text-gray-500">{review.date}</span>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
   );
 }
