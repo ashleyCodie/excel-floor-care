@@ -2,6 +2,10 @@
 
 A modern, responsive website for Excel Floor Care - a professional grout, tile, and carpet cleaning service based in Phoenix, Arizona.
 
+## 🚀 Live Demo
+
+[View Live Site](https://excel-floor-care.vercel.app)
+
 ## 🌟 Features
 
 - **Animated Hero Section** with curved scrolling text and gradient effects
