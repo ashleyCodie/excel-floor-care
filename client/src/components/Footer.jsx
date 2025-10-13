@@ -1,4 +1,4 @@
-import { Facebook, Twitter } from "lucide-react"
+import { Facebook, Twitter, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -39,7 +39,7 @@ export default function Footer() {
               <h3 className="text-xl font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/excelfloorcare"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -48,13 +48,13 @@ export default function Footer() {
                   <Facebook className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.instagram.com/excelfloorcare"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="Twitter"
+                  aria-label="Instagram"
                 >
-                  <Twitter className="w-6 h-6" />
+                  <Instagram className="w-6 h-6" />
                 </a>
               </div>
             </div>

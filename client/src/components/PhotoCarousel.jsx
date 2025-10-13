@@ -49,7 +49,7 @@ export default function PhotoCarousel() {
   };
 
   return (
-    <section id="photos" className="py-20 bg-gray-50">
+    <section id="photos" className="py-20 bg-blue-100">
       <div className="container mx-auto px-4">
         <SplitText
           text="Our Work"
