@@ -13,7 +13,6 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
-    address: "",
     message: "",
   })
   const [status, setStatus] = useState("")
@@ -25,7 +24,7 @@ export default function Contact() {
     // Simulate email sending
     setTimeout(() => {
       setStatus("success")
-      setFormData({ name: "", email: "", phone: "", address: "", message: "" })
+      setFormData({ name: "", email: "", phone: "", message: "" })
       setTimeout(() => setStatus(""), 3000)
     }, 1000)
   }
@@ -85,16 +84,6 @@ export default function Contact() {
                         name="phone"
                         placeholder="Phone"
                         value={formData.phone}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="text"
-                        name="address"
-                        placeholder="Address"
-                        value={formData.address}
                         onChange={handleChange}
                         required
                       />
