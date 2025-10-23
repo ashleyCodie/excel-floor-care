@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/Button"
-import { Input } from "@/components/ui/Input"
-import { Textarea } from "@/components/ui/Textarea"
-import { Card, CardContent } from "@/components/ui/Card"
-import { MapPin, Phone, Clock } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { Card, CardContent } from "@/components/ui/Card";
+import { MapPin, Phone, Clock } from "lucide-react";
 import GradientText from "./GradientText";
 
 export default function Contact() {
@@ -14,27 +14,27 @@ export default function Contact() {
     email: "",
     phone: "",
     message: "",
-  })
-  const [status, setStatus] = useState("")
+  });
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setStatus("sending")
+    e.preventDefault();
+    setStatus("sending");
 
     // Simulate email sending
     setTimeout(() => {
-      setStatus("success")
-      setFormData({ name: "", email: "", phone: "", message: "" })
-      setTimeout(() => setStatus(""), 3000)
-    }, 1000)
-  }
+      setStatus("success");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setTimeout(() => setStatus(""), 3000);
+    }, 1000);
+  };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <section id="contact" className="py-20 bg-blue-100">
@@ -50,7 +50,7 @@ export default function Contact() {
               Contact Us Today!
             </GradientText>
           </div>
-          
+
           {/* Two column grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left column - Form */}
@@ -106,13 +106,15 @@ export default function Contact() {
                       {status === "sending" ? "Sending..." : "Send Message"}
                     </Button>
                     {status === "success" && (
-                      <p className="text-green-600 text-center">Message sent successfully!</p>
+                      <p className="text-green-600 text-center">
+                        Message sent successfully!
+                      </p>
                     )}
                   </form>
                 </CardContent>
               </Card>
             </div>
-            
+
             {/* Right column - Contact Info */}
             <div className="space-y-6">
               <Card>
@@ -136,7 +138,12 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                      <p className="text-gray-700">(480) 729-2731</p>
+                      <a
+                        href="tel:+14807292731"
+                        className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+                      >
+                        (480) 729-2731
+                      </a>
                     </div>
                   </div>
                 </CardContent>
@@ -146,7 +153,9 @@ export default function Contact() {
                   <div className="flex items-start gap-4">
                     <Clock className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Hours of Operation</h3>
+                      <h3 className="font-semibold text-lg mb-2">
+                        Hours of Operation
+                      </h3>
                       <p className="text-gray-700">
                         Monday - Sunday
                         <br />
@@ -161,5 +170,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
