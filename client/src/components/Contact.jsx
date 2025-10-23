@@ -54,11 +54,11 @@ export default function Contact() {
           {/* Two column grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left column - Form */}
-            <div>
-              <Card>
+            <div className="h-full">
+              <Card  className="h-full">
                 <CardContent className="pt-6">
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
+                    <div className="pt-6">
                       <Input
                         type="text"
                         name="name"
@@ -116,8 +116,8 @@ export default function Contact() {
             </div>
 
             {/* Right column - Contact Info */}
-            <div className="space-y-6">
-              <Card>
+            <div className="space-y-6 h-full flex flex-col">
+              <Card className="flex-1">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
                     <MapPin className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />

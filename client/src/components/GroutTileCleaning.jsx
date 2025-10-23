@@ -60,7 +60,7 @@ export default function GroutTileCleaning() {
             </div>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/grout1.jpg"
+                src="/truck.webp"
                 alt="Grout and tile cleaning service"
                 className="w-full h-full object-cover"
               />
